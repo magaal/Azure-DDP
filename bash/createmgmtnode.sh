@@ -69,6 +69,28 @@ if [[ -z $result ]]; then
 	
 	#add endpoint for ambari web interface
 	azure vm endpoint create --endpoint-name "Installer" $vmName $installerport $installerport
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 0 -a permit -t SUBNET1 -r KP0
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 1 -a permit -t SUBNET2 -r KP1
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 2 -a permit -t SUBNET3 -r KP2
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 3 -a permit -t SUBNET4 -r KP3
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 4 -a permit -t SUBNET5 -r KP4
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 5 -a permit -t SUBNET6 -r KP5
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 6 -a permit -t SUBNET7 -r KP6
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 7 -a permit -t SUBNET8 -r KP7
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 8 -a permit -t SUBNET9 -r KP8
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 9 -a permit -t SUBNET10 -r KP9
+        azure vm endpoint acl-rule create -n $vmName -e Installer -o 10 -a permit -t SUBNET11 -r KP10
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 0 -a permit -t SUBNET1 -r KP0
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 1 -a permit -t SUBNET2 -r KP1
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 2 -a permit -t SUBNET3 -r KP2
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 3 -a permit -t SUBNET4 -r KP3
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 4 -a permit -t SUBNET5 -r KP4
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 5 -a permit -t SUBNET6 -r KP5
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 6 -a permit -t SUBNET7 -r KP6
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 7 -a permit -t SUBNET8 -r KP7
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 8 -a permit -t SUBNET9 -r KP8
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 9 -a permit -t SUBNET10 -r KP9
+        azure vm endpoint acl-rule create -n $vmName -e ssh -o 10 -a permit -t SUBNET11 -r KP10
 
 	printf "######################################## Virtual Machine Management Node Details #######################################\n"
 	#display the details about the newly created VM
