@@ -47,7 +47,7 @@ hostsfile="hosts.txt"
 
 #########Start Management Node and Clone Node Settings
 #Name of the image you will use to create your management node and clone node virtual machines
-export galleryimageName=5112500ae3b842c8b9c604889f8753c3__OpenLogic-CentOS-65-20140415
+export galleryimageName=5112500ae3b842c8b9c604889f8753c3__OpenLogic-CentOS-66-20150605
 
 #Size of the Virtual machine. Valid instanceSize settings are available online: http://msdn.microsoft.com/en-us/library/azure/dn197896.aspx
 #we recommend extra large or higher for the cluster nodes
